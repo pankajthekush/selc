@@ -74,10 +74,11 @@ def take_screenshot(driver,max_page=30):
     base_64 = scr.generate_64()
     return base_64
 
-def convert_64(base_64_str):
+def convert_64_img(base_64_str):
     with tempfile.NamedTemporaryFile(mode='wb',suffix='.png',delete=False) as f:
         f.write(base64.b64decode(base_64_str))
     return f.name
+
 
 
 
