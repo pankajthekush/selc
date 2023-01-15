@@ -32,11 +32,20 @@ class ScPage():
     def _scroll(self,sleep_t):
         page_end = False
         bscroll_top = int(self._driver.execute_script('return document.body.scrollTop '))
-        self._driver.execute_script(f'document.body.scrollTo(0,{self._inner_height})')
+        if bscroll_top == 0:
+            bscroll_top = int(self._driver.execute_script('return window.scrollY'))
+
+        self._driver.execute_script(f'document.documentElement.scrollTo(0,{self._inner_height})')
         self._inner_height += int(self._driver.execute_script('return window.innerHeight'))
+
+
         ascroll_top = int(self._driver.execute_script('return document.body.scrollTop '))
+        if ascroll_top == 0:
+            ascroll_top = int(self._driver.execute_script('return window.scrollY'))
+
         if bscroll_top == ascroll_top:
             page_end = True
+        
         time.sleep(sleep_t)
         return page_end
 
