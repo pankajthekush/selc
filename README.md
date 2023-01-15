@@ -4,6 +4,12 @@ Take full page screenshot from selenium driver
 Take screenshot of the given page and  return base64 string png image, this app does not add/remove/delete/hide elements or even resizes the size of your window, you are responsible to maximize/resize hide elements, I have to keep it very simple.
 
 
+# installation 
+```sh
+pip install git+https://github.com/pankajthekush/selc.git
+```
+
+# Example 
 ```python
 from selenium import webdriver
 from selc.selc import take_screenshot,convert_64_img
