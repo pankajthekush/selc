@@ -21,4 +21,4 @@ output
 /tmp/tmp6c2ix031.png
 (env) pankaj:selc$ 
 ```
-[![Run time sample](example.gif)]
+![exampl](https://user-images.githubusercontent.com/7762961/212549239-452b0c34-d3ee-4350-8f6d-69f3c210939c.gif)
